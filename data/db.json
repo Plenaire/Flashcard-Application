@@ -1,0 +1,69 @@
+{
+  "decks": [
+    {
+      "name": "adsfadsfasdfasdf",
+      "description": "asdfasdf",
+      "id": 4
+    },
+    {
+      "name": "test",
+      "description": "test",
+      "id": 5
+    },
+    {
+      "name": "",
+      "description": "",
+      "id": 6
+    }
+  ],
+  "cards": [
+    {
+      "front": "Front side of cardadsfadsf",
+      "back": "Back side of cardadsfadsf",
+      "deckId": 4,
+      "id": 1
+    },
+    {
+      "front": "3",
+      "back": "3",
+      "deckId": 4,
+      "id": 3
+    },
+    {
+      "front": "2",
+      "back": "2",
+      "deckId": 5,
+      "id": 5
+    },
+    {
+      "front": "3",
+      "back": "3",
+      "deckId": 5,
+      "id": 6
+    },
+    {
+      "front": "4",
+      "back": "4",
+      "deckId": 5,
+      "id": 7
+    },
+    {
+      "front": "1",
+      "back": "1",
+      "deckId": 6,
+      "id": 8
+    },
+    {
+      "front": "2",
+      "back": "2",
+      "deckId": 6,
+      "id": 9
+    },
+    {
+      "front": "34",
+      "back": "44",
+      "deckId": 6,
+      "id": 10
+    }
+  ]
+}
