@@ -31,7 +31,7 @@ function Home() {
                     <div key={deck.id} className="card mb-3">
                         <div className="card-body">
                             <h4 className="title"> {deck.name} </h4>
-                            <h6 className="card-subtitle mb-2 text-muted"> {deck.cards.length} </h6>
+                            <h6 className="card-subtitle mb-2 text-muted"> {deck.cards.length} {deck.cards.length === 1 ? "card" : "cards"} </h6>
                             <p className="card-text"> {deck.description} </p>
                             <Link to={`/decks/${deck.id}`}>
                                 <Button> View </Button>
