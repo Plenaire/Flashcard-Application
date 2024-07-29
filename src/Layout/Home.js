@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { deleteDeck, listDecks } from "../utils/api/index";
 
 import { Button } from "./Button";
 
 function Home() {
     const [deckList, setDeckList] = useState([]);
-    const navigate = useNavigate();
 
     useEffect(() => {
         async function loadDecks() {
@@ -32,17 +31,19 @@ function Home() {
                     <div key={deck.id} className="card mb-3">
                         <div className="card-body">
                             <h4 className="title"> {deck.name} </h4>
-                            <h6 className="card-subtitle mb-2 text-muted"> {`${deck.cards.length} cards`} </h6>
+                            <h6 className="card-subtitle mb-2 text-muted"> {deck.cards.length} </h6>
                             <p className="card-text"> {deck.description} </p>
                             <Link to={`/decks/${deck.id}`}>
                                 <Button> View </Button>
                             </Link>
                             <Button
                                 className="btn btn-danger"
-                                onClick={() => {
+                                onClick={async () => {
                                     if (window.confirm("Delete this deck?")) {
-                                        deleteDeck(`${deck.id}`);
-                                        navigate("/");
+                                        await deleteDeck(`${deck.id}`);
+                                        setDeckList((prevDeckList) =>
+                                            prevDeckList.filter((d) => d.id !== deck.id)
+                                        );
                                     }
                                 }}
                             >
