@@ -37,7 +37,7 @@ function Home() {
                                 <Button> View </Button>
                             </Link>
                             <Button
-                                className="btn btn-danger"
+                                danger
                                 onClick={async () => {
                                     if (window.confirm("Delete this deck?")) {
                                         await deleteDeck(`${deck.id}`);
